@@ -33,20 +33,6 @@
     "material design",
     "bootstrap"
   ],
-  "scripts": {
-    "typescript": "tsc --noEmit",
-    "lint": "yarn lint-no-fix --fix",
-    "lint-no-fix": "eslint --ext '.js,.ts,.tsx' .",
-    "test": "jest",
-    "prepack": "bob build && node ./scripts/generate-mappings.js",
-    "release": "release-it",
-    "bootstrap": "yarn --cwd example && yarn --cwd docs && yarn",
-    "docs": "yarn --cwd docs",
-    "example": "yarn --cwd example"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "dependencies": {
     "@callstack/react-theme-provider": "^3.0.9",
     "color": "^3.1.2",
@@ -107,12 +93,6 @@
     "react-native-safe-area-context": "*",
     "react-native-vector-icons": "*"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint-no-fix && yarn typescript && yarn test"
-    }
-  },
   "jest": {
     "preset": "react-native",
     "setupFiles": [
@@ -163,5 +143,4 @@
       ]
     ]
   },
-  "packageManager": "yarn@4.5.3"
 }
